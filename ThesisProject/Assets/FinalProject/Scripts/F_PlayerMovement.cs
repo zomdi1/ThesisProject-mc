@@ -17,7 +17,7 @@ public class F_PlayerMovement : MonoBehaviour
         characterRB = GetComponent<Rigidbody>(); // Getting the Rigidbody component attached to the character
     }
 
-    void Update()
+    void FixedUpdate()
     {
        
         if (movementInput != Vector3.zero)
@@ -29,8 +29,6 @@ public class F_PlayerMovement : MonoBehaviour
         // Set the velocity of the character's Rigidbody to move it
         characterRB.velocity = (movementVector * Time.fixedDeltaTime * movementSpeed);
 
-        // Reset the y component of movement vector to prevent unwanted vertical movement
-        movementVector = new Vector3(0, movementVector.y, 0);
     }
 
     // This method is invoked when there is movement input

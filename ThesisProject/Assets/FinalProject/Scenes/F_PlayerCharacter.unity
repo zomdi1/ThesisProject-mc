@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6085966, g: 0.7550853, b: 0.83654284, a: 1}
+  m_IndirectSpecularColor: {r: 0.60859674, g: 0.7550854, b: 0.8365434, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12426,17 +12426,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 92805988888915911, guid: 32eab5062dcbef44791faab5d1ba7466, type: 3}
-      propertyPath: field of view
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 350168542820140225, guid: 32eab5062dcbef44791faab5d1ba7466, type: 3}
       propertyPath: m_Name
       value: F_PlayerCharacterPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 1531856180147306367, guid: 32eab5062dcbef44791faab5d1ba7466, type: 3}
-      propertyPath: mouseSensitivity
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

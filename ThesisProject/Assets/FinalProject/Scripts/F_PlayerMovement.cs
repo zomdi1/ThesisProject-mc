@@ -25,9 +25,11 @@ public class F_PlayerMovement : MonoBehaviour
             // Calculate movement vector based on input and current orientation of the character
             movementVector = transform.right * movementInput.x + transform.forward * movementInput.z;
         }
+        else F_SoundManager.instance.StopPlayingFromSource(GetComponent<AudioSource>());
 
         // Set the velocity of the character's Rigidbody to move it
         characterRB.velocity = (movementVector * Time.fixedDeltaTime * movementSpeed);
+        movementVector = Vector3.zero;
 
     }
 
@@ -36,5 +38,7 @@ public class F_PlayerMovement : MonoBehaviour
     {
         // Getting movement input values (x and y axes)
         movementInput = new Vector3(input.Get<Vector2>().x, 0, input.Get<Vector2>().y);
+        // Playing step sound when movement input is registered
+        F_SoundManager.instance.PlayAudioClipOnLoop(GetComponent<AudioSource>(), F_SoundManager.instance.stepAudio);
     }
 }

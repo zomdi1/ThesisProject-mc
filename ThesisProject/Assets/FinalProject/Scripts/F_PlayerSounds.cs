@@ -17,7 +17,7 @@ public class F_PlayerSounds : MonoBehaviour
             audioSource.clip = F_SoundBank.Instance.stepAudio;
             audioSource.loop = true;
         }
-        //preventing sound from starting over every time we press multiple buttons
+        // Preventing sound from starting over every time we press multiple buttons
         if (!audioSource.isPlaying) audioSource.Play();
     }
     private void OnMovementStop(InputValue input)

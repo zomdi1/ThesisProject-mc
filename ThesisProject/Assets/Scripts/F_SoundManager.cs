@@ -15,19 +15,4 @@ public class F_SoundManager : MonoBehaviour
         }
         instance = this;
     }
-    public void PlayFromSource(AudioSource source)
-    {
-        source.Play();
-    }
-    public void StopPlayingFromSource(AudioSource source)
-    {
-        source.Stop();
-    }
-    public void PlayAudioClipOnLoop(AudioSource source, AudioClip clip)
-    {
-        source.clip = clip;
-        source.loop = true;
-
-        PlayFromSource(source);
-    }
 }

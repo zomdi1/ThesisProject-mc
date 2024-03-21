@@ -36,12 +36,9 @@ public class F_PlayerMovement : MonoBehaviour
     {
         // Getting movement input values (x and y axes)
         movementInput = new Vector3(input.Get<Vector2>().x, 0, input.Get<Vector2>().y);
-        // Playing step sound when movement input is registered
-        F_SoundManager.instance.PlayAudioClipOnLoop(GetComponent<AudioSource>(), F_SoundManager.instance.stepAudio);
     }
     private void OnMovementStop(InputValue input)
     {
-        F_SoundManager.instance.StopPlayingFromSource(GetComponent<AudioSource>());
         movementVector = Vector3.zero;
     }
 }

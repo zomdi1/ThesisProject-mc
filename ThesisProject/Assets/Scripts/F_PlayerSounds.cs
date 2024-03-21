@@ -12,9 +12,9 @@ public class F_PlayerSounds : MonoBehaviour
     private void OnMovement(InputValue input)
     {
         // Playing step sound when movement input is registered
-        if (audioSource.clip != F_SoundManager.instance.stepAudio)
+        if (audioSource.clip != F_SoundBank.Instance.stepAudio)
         {
-            audioSource.clip = F_SoundManager.instance.stepAudio;
+            audioSource.clip = F_SoundBank.Instance.stepAudio;
             audioSource.loop = true;
         }
         //preventing sound from starting over every time we press multiple buttons

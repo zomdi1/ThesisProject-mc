@@ -14,6 +14,7 @@ public class F_PauseMenu : MonoBehaviour
     private void Start()
     {
         playerObject = GameObject.FindGameObjectWithTag("Player");
+        ResetPauseUI();
     }
 
     void OnPauseGame(InputValue inputValue)//is called when our escape key is pressed

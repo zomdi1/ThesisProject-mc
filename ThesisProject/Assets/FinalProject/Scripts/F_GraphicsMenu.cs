@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+
 public class F_GraphicsMenu : MonoBehaviour
 {
     GameObject playerObject; //a reference to the player object to gain access to its components
-    [SerializeField] TMP_Dropdown resolutionDropDown; //a reference to the player object to gain access to its components
-    [SerializeField] Slider mouseSensitivitySlider;//a reference to the player object to gain access to its components
-    [SerializeField] TMP_Text sensitivityValueTxt;//a reference to the player object to gain access to its components
+    [SerializeField] TMP_Dropdown resolutionDropDown; // A reference to our resolutions drop down UI element
+    [SerializeField] Slider mouseSensitivitySlider;//A reference to our mouse sensitivity slider to get access to its value 
+    [SerializeField] TMP_Text sensitivityValueTxt; //A reference to mouse sensitivity value text object to display the current value of the slider
     Resolution[] resolutions ;
     // Start is called before the first frame update
     void Start()

@@ -10,11 +10,14 @@ public class F_PlayerMovement : MonoBehaviour
 
     private Vector3 movementInput; // Stores movement input received from the player
     private Vector3 movementVector; // Stores the resulting movement vector
+    private Animator animator; //Animator to turn on animations
     [SerializeField] private float movementSpeed; // Movement speed of the character
+
 
     void Start()
     {
         characterRB = GetComponent<Rigidbody>(); // Getting the Rigidbody component attached to the character
+        animator = GetComponent<Animator>(); // Getting the Animator component attached to the character
     }
 
     void FixedUpdate()
@@ -36,9 +39,15 @@ public class F_PlayerMovement : MonoBehaviour
     {
         // Getting movement input values (x and y axes)
         movementInput = new Vector3(input.Get<Vector2>().x, 0, input.Get<Vector2>().y);
+        animator.SetBool("IsMoving", true);
     }
     private void OnMovementStop(InputValue input)
     {
         movementVector = Vector3.zero;
+        animator.SetBool("IsMoving", false);
+    }
+    private void OnAttack(InputValue input)
+    {
+        if(movementVector== Vector3.zero&& !animator.GetCurrentAnimatorStateInfo(0).IsName("Swing")) animator.SetTrigger("IsSwinging");
     }
 }

@@ -6,21 +6,16 @@ using UnityEngine.InputSystem;
 
 public class F_DialogueManager : MonoBehaviour
 {
-    //
     public static F_DialogueManager Instance { get; private set; }
-    public bool InDialogue { get; private set; }
-    public bool InBuffer { get; private set; }
-    public bool dialogueFinsihed = false;
-    public float textDelay = 0.1f; //how fast each letter shows up on screen
-    //
+
+    private bool inDialogue;
     private bool isTyping;
-    private F_SO_Dialgue currentDialogue;
     private Queue<F_SO_Dialgue.Info> dialogueQueue;
     private string completeText;
-
+    [SerializeField] private float textDelay = 0.1f; //how fast each letter shows up on screen
     //UI
-    public TMP_Text dialogueText;
-    public GameObject dialogueBox;
+    [SerializeField] TMP_Text dialogueText;
+    [SerializeField] GameObject dialogueBox;
 
     private void Awake()
     {
@@ -38,29 +33,22 @@ public class F_DialogueManager : MonoBehaviour
         dialogueQueue = new Queue<F_SO_Dialgue.Info>();
     }
 
-    private void Update()
+    private void OnInteract()
     {
-        if(InDialogue)
+        if (inDialogue)
         {
-            if (Input.GetKeyDown(KeyCode.E)) //change to new input
-            {
-                DequeueDialogue();
-            }
+            DequeueDialogue();
         }
     }
 
     public void QueueDialogue(F_SO_Dialgue dialogue)
     {
-        dialogueFinsihed = false;
-        if (InDialogue || InBuffer)
+        if (inDialogue)
         {
             return;
         }
         GameObject.FindWithTag("Player").GetComponent<PlayerInput>().enabled = false;
-        InDialogue = true;
-        InBuffer = true;
-        StartCoroutine(Buffer());
-        currentDialogue = dialogue;
+        inDialogue = true;
         dialogueBox.SetActive(true);
         dialogueQueue.Clear();
         foreach (F_SO_Dialgue.Info line in dialogue.dialogueInfo)
@@ -73,10 +61,6 @@ public class F_DialogueManager : MonoBehaviour
     {
         if (isTyping)
         {
-            if (InBuffer)
-            {
-                return;
-            }
             CompleteText();
             StopAllCoroutines();
             isTyping = false;
@@ -99,16 +83,8 @@ public class F_DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         dialogueBox.SetActive(false);
-        InBuffer = true;
-        StartCoroutine(Buffer());
-        InDialogue = false;
+        inDialogue = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerInput>().enabled = true;
-        dialogueFinsihed = true;
-    }
-    public IEnumerator Buffer()
-    {
-        yield return new WaitForSeconds(0.1f);
-        InBuffer = false;
     }
     public IEnumerator TypeText(F_SO_Dialgue.Info info)
     {

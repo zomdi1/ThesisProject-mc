@@ -9,9 +9,9 @@ public class F_DialogueManager : MonoBehaviour
     public static F_DialogueManager Instance { get; private set; }
 
     private bool inDialogue;
-    private bool isTyping;
-    private Queue<F_SO_Dialgue.Info> dialogueQueue;
-    private string completeText;
+    private bool isTyping; 
+    private Queue<F_SO_Dialgue.Info> dialogueQueue; //Queue of the Info class (our strings of dialogue)
+    private string completeText; //full version of the text we are displaying
     [SerializeField] private float textDelay = 0.1f; //how fast each letter shows up on screen
     //UI
     [SerializeField] TMP_Text dialogueText;
@@ -57,7 +57,7 @@ public class F_DialogueManager : MonoBehaviour
         }
         DequeueDialogue();
     }
-    public void DequeueDialogue()
+    private void DequeueDialogue()
     {
         if (isTyping)
         {
@@ -86,7 +86,7 @@ public class F_DialogueManager : MonoBehaviour
         inDialogue = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerInput>().enabled = true;
     }
-    public IEnumerator TypeText(F_SO_Dialgue.Info info)
+    private IEnumerator TypeText(F_SO_Dialgue.Info info)
     {
         isTyping = true;
         foreach (char c in info.dialogue.ToCharArray())

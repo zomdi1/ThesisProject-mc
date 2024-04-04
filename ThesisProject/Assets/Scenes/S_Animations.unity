@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6085966, g: 0.7550853, b: 0.83654284, a: 1}
+  m_IndirectSpecularColor: {r: 0.60859674, g: 0.7550854, b: 0.8365434, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20371,29 +20371,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 92805988888915911, guid: 32eab5062dcbef44791faab5d1ba7466, type: 3}
-      propertyPath: orthographic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 92805988888915911, guid: 32eab5062dcbef44791faab5d1ba7466, type: 3}
-      propertyPath: m_FOVAxisMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 92805988888915911, guid: 32eab5062dcbef44791faab5d1ba7466, type: 3}
-      propertyPath: near clip plane
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 350168542820140225, guid: 32eab5062dcbef44791faab5d1ba7466, type: 3}
       propertyPath: m_Name
       value: F_PlayerCharacterPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 996254512318947043, guid: 32eab5062dcbef44791faab5d1ba7466, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.098
-      objectReference: {fileID: 0}
-    - target: {fileID: 1627333446283902909, guid: 32eab5062dcbef44791faab5d1ba7466, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.217
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

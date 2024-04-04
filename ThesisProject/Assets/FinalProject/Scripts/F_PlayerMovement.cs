@@ -39,15 +39,18 @@ public class F_PlayerMovement : MonoBehaviour
     {
         // Getting movement input values (x and y axes)
         movementInput = new Vector3(input.Get<Vector2>().x, 0, input.Get<Vector2>().y);
-        animator.SetBool("IsMoving", true);
+        if(animator!= null)animator.SetBool("IsMoving", true);
     }
     private void OnMovementStop(InputValue input)
     {
         movementVector = Vector3.zero;
-        animator.SetBool("IsMoving", false);
+        if (animator != null) animator.SetBool("IsMoving", false);
     }
     private void OnAttack(InputValue input)
     {
-        if(movementVector== Vector3.zero&& !animator.GetCurrentAnimatorStateInfo(0).IsName("Swing")) animator.SetTrigger("IsSwinging");
+        if (animator!=null&&movementVector == Vector3.zero && !animator.GetCurrentAnimatorStateInfo(0).IsName("Swing"))
+        {
+            animator.SetTrigger("IsSwinging");
+        }
     }
 }

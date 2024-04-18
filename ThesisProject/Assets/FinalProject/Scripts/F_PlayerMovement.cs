@@ -46,11 +46,5 @@ public class F_PlayerMovement : MonoBehaviour
         movementVector = Vector3.zero;
         if (animator != null) animator.SetBool("IsMoving", false);
     }
-    //private void OnAttack(InputValue input)
-    //{
-    //    if (animator!=null&&movementVector == Vector3.zero && !animator.GetCurrentAnimatorStateInfo(0).IsName("Swing"))
-    //    {
-    //        animator.SetTrigger("IsSwinging");
-    //    }
-    //}
+    
 }

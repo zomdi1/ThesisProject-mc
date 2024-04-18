@@ -34387,6 +34387,7 @@ GameObject:
   - component: {fileID: 6932356893996804360}
   - component: {fileID: 7093326694319624137}
   - component: {fileID: 1947915101832055682}
+  - component: {fileID: 7240239732330153757}
   m_Layer: 0
   m_Name: F_PlayerCharacterPrefab
   m_TagString: Player
@@ -34851,7 +34852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 10
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 55679502}
 --- !u!4 &1546395001386820014
 Transform:
   m_ObjectHideFlags: 0
@@ -37321,6 +37322,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7240239732330153757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350168543689886391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf4bdd259c21b646b9b68c7985c4593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7243872428021624697
 Transform:
   m_ObjectHideFlags: 0

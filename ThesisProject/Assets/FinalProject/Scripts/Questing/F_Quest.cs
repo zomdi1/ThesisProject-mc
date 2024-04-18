@@ -9,6 +9,7 @@ public class F_Quest
 
     public string title;
     public string description;
-    public int experienceReward;
-    public int goldReward;
+    public int reward;
+
+    public List<F_Goal> goals;
 }

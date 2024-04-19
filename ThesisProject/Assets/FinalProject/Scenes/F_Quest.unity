@@ -15710,6 +15710,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7238891033119205893, guid: ea1d9040b339d034abaa12dd47062386, type: 3}
   m_PrefabInstance: {fileID: 1189460326}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1194912427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1194912428}
+  m_Layer: 0
+  m_Name: EventController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1194912428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194912427}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1796475357}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1208130202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28945,6 +28976,7 @@ Transform:
   m_Children:
   - {fileID: 682727175}
   - {fileID: 106542386}
+  - {fileID: 1194912428}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1802939219
@@ -34148,6 +34180,7 @@ GameObject:
   - component: {fileID: 6932356893996804360}
   - component: {fileID: 7093326694319624137}
   - component: {fileID: 1947915101832055682}
+  - component: {fileID: 7240239732330153757}
   m_Layer: 0
   m_Name: F_PlayerCharacterPrefab
   m_TagString: Player
@@ -34628,7 +34661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 10
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 1999544993}
 --- !u!4 &1546395001386820014
 Transform:
   m_ObjectHideFlags: 0
@@ -35112,13 +35145,34 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6022912003470177797, guid: 5ed459fa9af3cc54a8803d749f445718, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1310045447}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6403694408603462847, guid: 5ed459fa9af3cc54a8803d749f445718, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2606311158365134060}
   m_SourcePrefab: {fileID: 100100000, guid: 5ed459fa9af3cc54a8803d749f445718, type: 3}
 --- !u!4 &2606311158365134058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4356454202060886558, guid: 5ed459fa9af3cc54a8803d749f445718, type: 3}
   m_PrefabInstance: {fileID: 2606311158365134057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2606311158365134059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6403694408603462847, guid: 5ed459fa9af3cc54a8803d749f445718, type: 3}
+  m_PrefabInstance: {fileID: 2606311158365134057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2606311158365134060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606311158365134059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f83f210d24d97c40a824b187c4b5658, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questItemName: StinkyFish
 --- !u!1 &2663320246437673072
 GameObject:
   m_ObjectHideFlags: 0
@@ -36771,7 +36825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901977720195416740, guid: f603eed00fb25f6479b139e6ab1358d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901977720195416740, guid: f603eed00fb25f6479b139e6ab1358d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -36782,11 +36836,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7871904391100215559}
     - target: {fileID: 8901977720195416740, guid: f603eed00fb25f6479b139e6ab1358d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7871904391100215559}
+    - target: {fileID: 8901977720195416740, guid: f603eed00fb25f6479b139e6ab1358d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8901977720195416740, guid: f603eed00fb25f6479b139e6ab1358d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AcceptQuest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901977720195416740, guid: f603eed00fb25f6479b139e6ab1358d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: CloseQuestWindow
       objectReference: {fileID: 0}
     - target: {fileID: 8901977720195416740, guid: f603eed00fb25f6479b139e6ab1358d8, type: 3}
@@ -36795,7 +36857,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901977720195416740, guid: f603eed00fb25f6479b139e6ab1358d8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: F_PauseMenu, Assembly-CSharp
+      value: F_QuestGiver, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901977720195416740, guid: f603eed00fb25f6479b139e6ab1358d8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37365,7 +37431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b089e6a997de63b4ab43fa57be630df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 1999544996}
   interactRange: 4
 --- !u!82 &7240239732330153756
 AudioSource:
@@ -37463,6 +37529,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7240239732330153757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350168543689886391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8502f1312e39c4b8c3c439159ded8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeQuests: []
 --- !u!4 &7243872428021624697
 Transform:
   m_ObjectHideFlags: 0
@@ -37676,8 +37755,7 @@ MonoBehaviour:
     description: There is something stinky here at the market and it's bothering
       me. It's coming from the fish market place. Find it and remove it! I will pay
       you for it.
-    experienceReward: 0
-    goldReward: 5
+    reward: 5
   questWindow: {fileID: 1094948514640342213}
   titleText: {fileID: 635653999}
   descriptionText: {fileID: 815703065498864201}

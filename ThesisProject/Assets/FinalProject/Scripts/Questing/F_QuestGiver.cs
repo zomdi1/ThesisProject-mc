@@ -26,7 +26,7 @@ public class F_QuestGiver : MonoBehaviour, IInteractable
 
         titleText.text = quest.title;
         descriptionText.text = quest.description;
-        rewardText.text = "Reward: " + quest.goldReward.ToString() + " gold";
+        rewardText.text = "Reward: " + quest.reward.ToString() + " gold";
     }
     public  void CloseQuestWindow()
     {

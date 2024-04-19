@@ -34331,6 +34331,7 @@ GameObject:
   - component: {fileID: 862775787820426249}
   - component: {fileID: 1002488574199909918}
   - component: {fileID: 7175725909599150139}
+  - component: {fileID: 7175725909599150140}
   m_Layer: 0
   m_Name: F_AnimationArmorStand
   m_TagString: Untagged
@@ -34560,8 +34561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66a7eb872adbe14e86d58c804845ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Health>k__BackingField: 40
-  <healthBar>k__BackingField: {fileID: 0}
 --- !u!1 &1029566342643361676
 GameObject:
   m_ObjectHideFlags: 0
@@ -37879,6 +37878,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9104530609475920823, guid: eb9ca50c76e3a994c88f03502ff873d0, type: 3}
+--- !u!114 &7175725909599150140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563453613552887590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a94555034939a74f82ed562d39e1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Health>k__BackingField: 40
+  <healthBar>k__BackingField: {fileID: 0}
 --- !u!82 &7240239732330153756
 AudioSource:
   m_ObjectHideFlags: 0

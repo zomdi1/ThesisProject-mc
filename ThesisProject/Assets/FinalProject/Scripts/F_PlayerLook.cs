@@ -31,7 +31,7 @@ public class F_PlayerLook : MonoBehaviour
 
         // Adjusting xRotation based on mouseY movement, and clamping it within a range
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -35f, 30f);
+        xRotation = Mathf.Clamp(xRotation, -35f, 35f);
 
         // Applying rotation to the player object (for left and right rotation)
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);

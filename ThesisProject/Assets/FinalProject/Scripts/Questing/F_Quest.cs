@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -12,4 +12,9 @@ public class F_Quest
     public int reward;
 
     public List<F_Goal> goals;
+    public void Complete()
+    {
+        isActive = false;
+        Debug.Log(title + " was completed");
+    }
 }

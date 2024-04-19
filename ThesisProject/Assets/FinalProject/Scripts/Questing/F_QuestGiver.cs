@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -12,6 +10,12 @@ public class F_QuestGiver : MonoBehaviour, IInteractable
     [SerializeField] TMP_Text descriptionText;
     [SerializeField] TMP_Text rewardText;
 
+    private void Start()
+    {
+        for (int i = 0;i < quest.goals.Count;i++) {
+            quest.goals[i].Init();
+        }
+    }
     public void Interact()
     {
         OpenQuestWindow();
@@ -38,6 +42,7 @@ public class F_QuestGiver : MonoBehaviour, IInteractable
     }
     public void AcceptQuest()
     {
-
+        quest.isActive = true;
+        GameObject.FindWithTag("Player").GetComponent<F_PlayerQuests>().activeQuests.Add(quest);
     }
 }

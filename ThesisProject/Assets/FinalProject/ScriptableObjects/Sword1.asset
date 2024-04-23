@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0796d3e3c3cab1e4b9f75193504332a1, type: 3}
   m_Name: Sword1
   m_EditorClassIdentifier: 
-  Name: Sword2
-  Mesh: {fileID: 5426684885162492598, guid: 892e5ad366182fd4f823a971e9e16281, type: 3}
-  AttackSpeed: 5
-  AttackPower: 30
+  Name: Sword1
+  Mesh: {fileID: -4692214948189147205, guid: 3164d361d8955d14c996186ce47ba3bf, type: 3}
+  AttackSpeed: 1
+  AttackPower: 7

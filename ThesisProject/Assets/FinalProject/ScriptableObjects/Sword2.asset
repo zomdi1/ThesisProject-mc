@@ -15,4 +15,4 @@ MonoBehaviour:
   Name: Sword2
   Mesh: {fileID: 5426684885162492598, guid: 892e5ad366182fd4f823a971e9e16281, type: 3}
   AttackSpeed: 5
-  AttackPower: 30
+  AttackPower: 15

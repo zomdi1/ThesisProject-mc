@@ -8,9 +8,11 @@ public class F_PlayerWeapon : MonoBehaviour
     private int attackPower;
     public int attackSpeed { get; private set; }
     public Collider Collider { get; private set; }
+    public F_SO_Weapon startingWeapon;
     public void Start()
     {
         Collider = GetComponent<Collider>();
+        ChangeWeapon(startingWeapon);
     }
     private void OnTriggerEnter(Collider other)
     {

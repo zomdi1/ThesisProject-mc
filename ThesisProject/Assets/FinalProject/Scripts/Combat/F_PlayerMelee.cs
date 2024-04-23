@@ -15,16 +15,18 @@ public class F_PlayerMelee : MonoBehaviour
         playerMovement = GetComponent<F_PlayerMovement>(); // Getting the Rigidbody component attached to the character
         animator = GetComponent<Animator>(); // Getting the Animator component attached to the character
         currentWeapon = GetComponentInChildren<F_PlayerWeapon>();
-        currentWeapon.enabled = false;
+        currentWeapon.Collider.enabled = false;
     }
     private void OnAttack(InputValue input)
     {
         if (animator != null && playerMovement.movementVector == Vector3.zero && canAttack)
         {
+           
+            animator.SetTrigger("IsSwinging");
             currentWeapon.Collider.enabled = true;
             canAttack = false;
-            animator.SetTrigger("IsSwinging");
             StartCoroutine(AttackCooldown());
+
         }
     }
     private IEnumerator AttackCooldown()

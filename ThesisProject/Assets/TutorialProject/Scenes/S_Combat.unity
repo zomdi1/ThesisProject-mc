@@ -34425,7 +34425,7 @@ GameObject:
   - component: {fileID: 5284379519201910820}
   - component: {fileID: 6296026961996470554}
   m_Layer: 0
-  m_Name: OHS03
+  m_Name: PlayerWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34558,8 +34558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66a7eb872adbe14e86d58c804845ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Health>k__BackingField: 0
-  <healthBar>k__BackingField: {fileID: 0}
 --- !u!1 &1029566342643361676
 GameObject:
   m_ObjectHideFlags: 0
@@ -35441,6 +35439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245dbc0116b9130428bae10d2eb1d2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: 0, z: 0}
   movementSpeed: 150
 --- !u!23 &2574274424969988198
 MeshRenderer:

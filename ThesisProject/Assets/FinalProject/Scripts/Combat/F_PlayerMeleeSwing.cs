@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
 
-public class F_PlayerMelee : MonoBehaviour
+public class F_PlayerMeleeSwing : MonoBehaviour
 {
     private Animator animator; //Animator to turn on animations
     private F_PlayerMovement playerMovement;
@@ -23,7 +23,7 @@ public class F_PlayerMelee : MonoBehaviour
         {
            
             animator.SetTrigger("IsSwinging");
-            currentWeapon.Collider.enabled = true;
+            StartCoroutine(DelayColliderActivation()); // We do this step to ensure that the target doesnt take damage if the sword is already colliding when swings is activated.
             canAttack = false;
             StartCoroutine(AttackCooldown());
 
@@ -34,5 +34,10 @@ public class F_PlayerMelee : MonoBehaviour
         yield return new WaitForSeconds(currentWeapon.attackSpeed);
         currentWeapon.Collider.enabled = false;
         canAttack = true;
+    }
+    private IEnumerator DelayColliderActivation()
+    {
+        yield return new WaitForSeconds(0.5f);
+        currentWeapon.Collider.enabled = true;
     }
 }

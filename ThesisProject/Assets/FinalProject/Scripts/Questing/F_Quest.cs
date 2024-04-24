@@ -12,7 +12,7 @@ public class F_Quest
     public int reward;
 
     public List<F_Goal> goals;
-    public void Complete()
+    public void CompleteQuest()
     {
         isActive = false;
         Debug.Log(title + " was completed");

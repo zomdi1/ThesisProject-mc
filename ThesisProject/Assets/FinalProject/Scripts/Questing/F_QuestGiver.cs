@@ -44,5 +44,6 @@ public class F_QuestGiver : MonoBehaviour, IInteractable
     {
         quest.isActive = true;
         GameObject.FindWithTag("Player").GetComponent<F_PlayerQuests>().activeQuests.Add(quest);
+        GameObject.FindWithTag("Player").GetComponent<F_PlayerQuests>().CheckQuests();
     }
 }

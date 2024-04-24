@@ -21,7 +21,7 @@ public class F_PlayerQuests : MonoBehaviour
             }
             if(allGoalsCompleted)
             {
-                activeQuests[i].Complete();
+                activeQuests[i].CompleteQuest();
             }
         }
     }

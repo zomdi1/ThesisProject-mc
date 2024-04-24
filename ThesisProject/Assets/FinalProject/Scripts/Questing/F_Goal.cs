@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 [System.Serializable]
 public class F_Goal
@@ -23,11 +20,11 @@ public class F_Goal
     {
         if (currentAmount >= requiredAmount)
         {
-            Complete();
+            CompleteGoal();
         }
     }
 
-    public void Complete()
+    public void CompleteGoal()
     {
         completed = true;
         GameObject.FindWithTag("Player").GetComponent<F_PlayerQuests>().CheckQuests();

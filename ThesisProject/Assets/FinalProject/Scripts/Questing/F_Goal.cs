@@ -20,11 +20,11 @@ public class F_Goal
     {
         if (currentAmount >= requiredAmount)
         {
-            Complete();
+            CompleteGoal();
         }
     }
 
-    public void Complete()
+    public void CompleteGoal()
     {
         completed = true;
         GameObject.FindWithTag("Player").GetComponent<F_PlayerQuests>().CheckQuests();

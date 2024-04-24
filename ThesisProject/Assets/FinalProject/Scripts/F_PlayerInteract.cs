@@ -10,6 +10,11 @@ public class F_PlayerInteract : MonoBehaviour
 {
     [SerializeField] Camera playerCamera;
     [SerializeField] float interactRange;
+
+    private void Start()
+    {
+        playerCamera = Camera.main;
+    }
     private void OnInteract(InputValue value)
     {
         // Shooting a ray from our camera

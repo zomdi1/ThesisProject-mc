@@ -336,6 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245dbc0116b9130428bae10d2eb1d2e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: 0, z: 0}
   movementSpeed: 150
 --- !u!114 &1531856180147306367
 MonoBehaviour:
@@ -612,7 +613,7 @@ GameObject:
   - component: {fileID: 5284379518457900626}
   - component: {fileID: 6296026963412621164}
   m_Layer: 0
-  m_Name: OHS03
+  m_Name: PlayerWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1406,9 +1407,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.4
+  near clip plane: 0.27
   far clip plane: 1000
-  field of view: 65
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: 0

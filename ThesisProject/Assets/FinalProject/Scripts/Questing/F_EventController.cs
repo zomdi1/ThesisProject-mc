@@ -16,8 +16,8 @@ public class F_EventController : MonoBehaviour
             Instance = this;
         }
     }
-    public void TriggerOnQuestItemInterraction(string ItemName)
+    public void TriggerOnQuestItemInterraction(string ItemName) 
     {
-        OnQuestItemInterraction?.Invoke(ItemName);
+        OnQuestItemInterraction?.Invoke(ItemName); //sending interacted objects name to goals in order to check if its correct item
     }
 }

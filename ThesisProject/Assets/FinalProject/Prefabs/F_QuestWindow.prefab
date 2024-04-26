@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2389183323716201023}
   m_Layer: 5
-  m_Name: QuestWindow
+  m_Name: F_QuestWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

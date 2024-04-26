@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8973777452599487894}
   m_Layer: 5
-  m_Name: DialogueBox
+  m_Name: F_DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

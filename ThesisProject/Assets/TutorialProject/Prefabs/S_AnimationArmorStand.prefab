@@ -427,7 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5282485605213971011}
   m_Layer: 0
-  m_Name: AnimationArmorStand
+  m_Name: S_AnimationArmorStand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

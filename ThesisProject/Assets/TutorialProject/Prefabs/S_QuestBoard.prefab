@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4363789054478651733}
   - component: {fileID: 9193230202712946975}
   m_Layer: 0
-  m_Name: QuestBoard
+  m_Name: S_QuestBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

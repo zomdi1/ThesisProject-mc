@@ -29208,7 +29208,6 @@ GameObject:
   - component: {fileID: 7240239732330153756}
   - component: {fileID: 6932356893996804360}
   - component: {fileID: 7093326694319624137}
-  - component: {fileID: 1947915101832055682}
   m_Layer: 0
   m_Name: F_PlayerCharacterPrefab
   m_TagString: Player
@@ -29770,27 +29769,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1947915101832055682
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 350168543689886391}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 0308cf4e83cf517488b60af58b290fe0, type: 3}
-  m_Controller: {fileID: 9100000, guid: 1312a337d1da64e4485e42f1be8440c5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &2010138123037201094
 Transform:
   m_ObjectHideFlags: 0

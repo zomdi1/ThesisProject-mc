@@ -16,9 +16,9 @@ public class F_PlayerWeapon : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<IDamageable>() != null)
+        if (other.GetComponent<F_IDamageable>() != null)
         {
-            other.GetComponent<IDamageable>().TakeDamage(attackPower,attackSpeed); //if the other collider is a IDamageable call for it's TakeDamage Method
+            other.GetComponent<F_IDamageable>().TakeDamage(attackPower,attackSpeed); //if the other collider is a IDamageable call for it's TakeDamage Method
         }
     }
 

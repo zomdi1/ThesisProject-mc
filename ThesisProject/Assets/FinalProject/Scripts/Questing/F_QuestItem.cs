@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class F_QuestItem : MonoBehaviour, IInteractable
+public class F_QuestItem : MonoBehaviour, F_IInteractable
 {
     public string questItemName;
     public void Interact()

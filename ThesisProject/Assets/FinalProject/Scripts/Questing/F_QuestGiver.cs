@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class F_QuestGiver : MonoBehaviour, IInteractable
+public class F_QuestGiver : MonoBehaviour, F_IInteractable
 {
     public F_Quest quest; // Holds the quest this object can give.
     [SerializeField] GameObject questWindow; // The UI panel that displays the quest details.

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class F_TrainingDummy : MonoBehaviour, IInteractable
+public class F_TrainingDummy : MonoBehaviour, F_IInteractable
 {
     public void Interact()
     {

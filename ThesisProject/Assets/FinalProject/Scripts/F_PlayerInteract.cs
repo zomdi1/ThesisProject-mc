@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 // Interface for all objects the player can interact with
-public interface IInteractable
+public interface F_IInteractable
 {
     void Interact();
 }
@@ -31,7 +31,7 @@ public class F_PlayerInteract : MonoBehaviour
         RaycastHit hitInfo;
         if (Physics.Raycast(ray, out hitInfo, interactRange))
         {
-            IInteractable interactable = hitInfo.collider.GetComponent<IInteractable>();
+            F_IInteractable interactable = hitInfo.collider.GetComponent<F_IInteractable>();
             if (interactable != null)
             {
                 // Calling interact method of the interactable

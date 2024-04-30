@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public interface IDamageable
+public interface F_IDamageable
 {
     public int Health { get; set; }//keeps track of the IDamageables current health
     public int MaxHealth { get; set; }
@@ -14,7 +14,7 @@ public interface IDamageable
     public void TakeDamage(int damageAmount,int damageDelay);
     public void Death();
 }
-public class F_CombatArmorStand : MonoBehaviour, IDamageable
+public class F_CombatArmorStand : MonoBehaviour, F_IDamageable
 {
     [field: SerializeField] public int Health { get; set; }
     

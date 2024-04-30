@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 
 
-public class F_AnimationArmorStand : MonoBehaviour,IInteractable
+public class F_AnimationArmorStand : MonoBehaviour,F_IInteractable
 {
     public void Interact()
     {

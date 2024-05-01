@@ -1,5 +1,5 @@
 {
-    "name": "F_UIPlayerActions 1",
+    "name": "F_UIPlayerActions",
     "maps": [
         {
             "name": "PlayerActionMap",
@@ -189,15 +189,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Interact",
-                    "type": "Button",
-                    "id": "9fc22dd0-5b80-4388-91c9-3265c0d206cc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -209,17 +200,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "PauseGame",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b52d54c0-c9d2-4028-aa2a-fadd097770e1",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

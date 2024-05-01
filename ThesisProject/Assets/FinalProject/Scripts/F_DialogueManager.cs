@@ -10,7 +10,7 @@ public class F_DialogueManager : MonoBehaviour
 
     private bool inDialogue;
     private bool isTyping; 
-    private Queue<F_SO_Dialgue.Info> dialogueQueue; //Queue of the Info class (our strings of dialogue)
+    private Queue<F_SO_Dialogue.Info> dialogueQueue; //Queue of the Info class (our strings of dialogue)
     private string completeText; //full version of the text we are displaying
     [SerializeField] private float textDelay = 0.1f; //how fast each letter shows up on screen
     //UI
@@ -30,7 +30,7 @@ public class F_DialogueManager : MonoBehaviour
             Instance = this;
         }
 
-        dialogueQueue = new Queue<F_SO_Dialgue.Info>();
+        dialogueQueue = new Queue<F_SO_Dialogue.Info>();
     }
 
     private void OnInteract()
@@ -41,7 +41,7 @@ public class F_DialogueManager : MonoBehaviour
         }
     }
 
-    public void QueueDialogue(F_SO_Dialgue dialogue)
+    public void QueueDialogue(F_SO_Dialogue dialogue)
     {
         if (inDialogue)
         {
@@ -51,7 +51,7 @@ public class F_DialogueManager : MonoBehaviour
         inDialogue = true;
         dialogueBox.SetActive(true);
         dialogueQueue.Clear();
-        foreach (F_SO_Dialgue.Info line in dialogue.dialogueInfo)
+        foreach (F_SO_Dialogue.Info line in dialogue.dialogueInfo)
         {
             dialogueQueue.Enqueue(line);
         }
@@ -71,7 +71,7 @@ public class F_DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        F_SO_Dialgue.Info info = dialogueQueue.Dequeue();
+        F_SO_Dialogue.Info info = dialogueQueue.Dequeue();
         completeText = info.dialogue;
         dialogueText.text = "";
         StartCoroutine(TypeText(info));
@@ -86,7 +86,7 @@ public class F_DialogueManager : MonoBehaviour
         inDialogue = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerInput>().enabled = true;
     }
-    private IEnumerator TypeText(F_SO_Dialgue.Info info)
+    private IEnumerator TypeText(F_SO_Dialogue.Info info)
     {
         isTyping = true;
         foreach (char c in info.dialogue.ToCharArray())

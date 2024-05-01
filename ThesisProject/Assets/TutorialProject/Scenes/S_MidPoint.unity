@@ -7886,41 +7886,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 237377258}
     m_Modifications:
-    - target: {fileID: 815703065903633966, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_text
-      value: 'This is dialogue Text example. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 815703065903633966, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_fontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 815703065903633966, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 113a9dfc0fca31e42ad50846664d34c6, type: 2}
-    - target: {fileID: 815703065903633966, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 815703065903633966, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 815703065903633966, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5874577669975657214, guid: 113a9dfc0fca31e42ad50846664d34c6, type: 2}
-    - target: {fileID: 815703065903633966, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1094948514772381858, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
       propertyPath: m_Name
       value: DialogueBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094948514772381858, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6430958923224685798, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
       propertyPath: m_Pivot.x
@@ -8001,14 +7969,6 @@ PrefabInstance:
     - target: {fileID: 6430958923224685798, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7055754707609581534, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1300
-      objectReference: {fileID: 0}
-    - target: {fileID: 7055754707609581534, guid: dd1672d394d8f8944910fc9be90ab7b5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

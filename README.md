@@ -1,3 +1,13 @@
+Challenges:
+1. Player Character w/ The Input System: i.3
+2. Background Sound and SFX: i
+5.NPC Dialogue using Scriptable Objects: i.1
+
+
+
+
+
+
 // this is work in progress
 
 
